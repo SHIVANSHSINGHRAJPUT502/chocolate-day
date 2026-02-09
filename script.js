@@ -41,7 +41,7 @@ chocolates.forEach(choco => {
     if (clickedCount === chocolates.length) {
       setTimeout(() => {
         document.querySelector(".final-screen").classList.add("show");
-      }, 3000);
+      }, 2800);
     }
 
     createHearts();
@@ -61,6 +61,7 @@ function createHearts() {
     setTimeout(() => heart.remove(), 1200);
   }
 }
+
 
 
 
