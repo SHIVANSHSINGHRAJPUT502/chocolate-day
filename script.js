@@ -48,6 +48,21 @@ chocolates.forEach(choco => {
   });
 });
 
+function shareChocolate() {
+  const url = window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      title: "Chocolate for you 🍫",
+      text: "Open this chocolate and see something special ❤️",
+      url: url
+    });
+  } else {
+    navigator.clipboard.writeText(url);
+    alert("Link copied! Share it ❤️");
+  }
+}
+
 function createHearts() {
   for (let i = 0; i < 6; i++) {
     const heart = document.createElement("div");
@@ -61,6 +76,7 @@ function createHearts() {
     setTimeout(() => heart.remove(), 1200);
   }
 }
+
 
 
 
